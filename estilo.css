@@ -195,10 +195,32 @@ footer {
     h2 {
         font-size: 1.8rem;
     }
+/* ================================================ */
+/* ===== NUEVOS ESTILOS PARA FILTRO CDMX ===== */
+/* ================================================ */
+.aviso-ubicacion {
+    background-color: #fefef5; /* Un fondo amarillo muy pálido */
+    border: 1px solid #e6dbb8;
+    border-left: 5px solid var(--color-acento-oliva); /* Acento de color */
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
 
+.aviso-ubicacion p {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.aviso-ubicacion strong {
+    color: var(--color-texto);
+}
     /* --- Estilos responsive para la galería --- */
     .proyecto-card {
         /* En móviles, cada tarjeta ocupa el 100% del ancho */
         flex-basis: 100%; 
     }
 }
+
