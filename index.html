@@ -73,7 +73,117 @@
             <h2>Vendemos Paz, No Remodelaciones</h2>
             <p>En ViveHome, entendemos que tu hogar es tu refugio, tu zona segura. No solo remodelamos espacios; creamos santuarios. Nuestro enfoque en el Interiorismo Emocional, como te quieres sentir y como lo vives.</p>
         </section>
+<section id="flujo-trabajo">
+            <h2>Nuestro Proceso: Del Sueño a la Realidad</h2>
+            <p class="subtitulo-flujo">Un proceso transparente de 6 fases para garantizar tu paz y satisfacción.</p>
 
+            <div class="flujo-container">
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">01</span>
+                    <h3>Descubrimiento Emocional</h3>
+                    <p>Consulta inicial gratuita para entender cómo quieres <strong>sentirte</strong> en tu espacio[cite: 88, 89].</p>
+                </div>
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">02</span>
+                    <h3>Diseño y Venta</h3>
+                    <p>Creación de renders 3D fotorrealistas y firma de contrato con el primer anticipo[cite: 91, 92, 93].</p>
+                </div>
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">03</span>
+                    <h3>Pre-Construcción</h3>
+                    <p>Planificación detallada, compra de materiales y preparación profesional del sitio[cite: 94, 95].</p>
+                </div>
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">04</span>
+                    <h3>Ejecución</h3>
+                    <p>Construcción bajo supervisión de calidad y comunicación semanal constante[cite: 96, 97].</p>
+                </div>
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">05</span>
+                    <h3>Cierre y Entrega</h3>
+                    <p>Acabados finales, limpieza profunda e inspección de calidad antes de la entrega[cite: 98, 99].</p>
+                </div>
+
+                <div class="flujo-paso">
+                    <span class="paso-numero">06</span>
+                    <h3>Post-Venta</h3>
+                    <p>Damos seguimiento a 30 días y documentamos el proyecto para tu garantía[cite: 100, 101].</p>
+                </div>
+            </div>
+        </section>
+        ```
+
+---
+
+### 2. Código CSS Actualizado (estilo.css)
+
+Ahora, vamos a añadir los estilos para que esta sección se vea elegante.
+
+**Parte A:** Copia este bloque de código y **pégalo al final de tu `estilo.css`**, justo **antes** de la línea que dice `/* --- CÓDIGO RESPONSIVE (Móviles) --- */`.
+
+```css
+/* ================================================ */
+/* ===== NUEVOS ESTILOS PARA FLUJO DE TRABAJO ===== */
+/* ================================================ */
+#flujo-trabajo {
+    /* Usamos el color de fondo para alternar con el blanco */
+    background-color: var(--color-fondo); 
+}
+
+.subtitulo-flujo {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flujo-container {
+    display: grid;
+    /* Creamos una cuadrícula de 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.flujo-paso {
+    background: var(--color-blanco);
+    border: 1px solid #f0f0f0;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    /* Alinear el texto a la izquierda para un look profesional */
+    text-align: left; 
+}
+
+.paso-numero {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-acento-oliva);
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso h3 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
         <section id="contacto">
     <h2>Inicia tu Consulta de Descubrimiento Emocional</h2>
     <p>Es gratuita. Hablemos de cómo quieres <strong>sentirte</strong> en tu espacio.</p>
@@ -159,6 +269,7 @@
 
 </body>
 </html>
+
 
 
 
