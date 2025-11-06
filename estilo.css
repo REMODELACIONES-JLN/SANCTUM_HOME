@@ -74,7 +74,7 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* --- Sección de Pilares (Servicios) --- */
+/* --- Sección de Pilares --- */
 #pilares ul {
     list-style-type: none;
     padding-left: 0;
@@ -88,7 +88,105 @@ h2 {
     color: var(--color-acento-oliva);
 }
 
-/* --- Formulario de Contacto --- */
+/* --- Sección Galería de Proyectos --- */
+.galeria-proyectos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.proyecto-card {
+    background: var(--color-blanco);
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    flex-basis: calc(33.333% - 20px); 
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.proyecto-info {
+    padding: 1.5rem;
+}
+
+.proyecto-info h3 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-acento-oliva);
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.proyecto-info p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* --- Sección Flujo de Trabajo (Con Iconos) --- */
+#flujo-trabajo {
+    background-color: var(--color-fondo); 
+}
+
+.subtitulo-flujo {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flujo-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
+}
+
+.flujo-paso {
+    background: var(--color-blanco);
+    border: 1px solid #f0f0f0;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    text-align: center; 
+    transition: box-shadow 0.3s ease;
+}
+
+.flujo-paso:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07);
+}
+
+.flujo-icono {
+    font-size: 2.5rem;
+    color: var(--color-acento-oliva);
+    margin-bottom: 1rem;
+}
+
+.flujo-paso h3 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Sección Contacto (Formulario) --- */
 form {
     display: grid;
     gap: 1.2rem;
@@ -101,7 +199,8 @@ form label {
 }
 
 form input,
-form textarea {
+form textarea,
+form select { /* Añadido 'select' para que los desplegables se vean bien */
     width: 100%;
     padding: 1rem;
     border: 1px solid #ccc;
@@ -126,147 +225,11 @@ form button:hover {
     background-color: var(--color-acento-oscuro);
 }
 
-/* --- Pie de Página --- */
-footer {
-    text-align: center;
-    padding: 2.5rem;
-    margin-top: 1rem;
-    color: #888;
-}
-
-
-/* ================================================ */
-/* ===== NUEVOS ESTILOS PARA LA GALERÍA AÑADIDOS ===== */
-/* ================================================ */
-.galeria-proyectos {
-    display: flex; /* Coloca las tarjetas una al lado de la otra */
-    justify-content: space-between; /* Distribuye el espacio */
-    flex-wrap: wrap; /* Si no caben, las pasa abajo (para móviles) */
-    gap: 20px; /* Espacio entre las tarjetas */
-}
-
-.proyecto-card {
-    background: var(--color-blanco);
-    border: 1px solid #f0f0f0; /* Borde muy sutil */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra suave */
-    overflow: hidden; /* Asegura que la imagen no se salga */
-    
-    /* Cada tarjeta tomará aprox 1/3 del espacio, menos el 'gap' */
-    flex-basis: calc(33.333% - 20px); 
-    display: flex;
-    flex-direction: column;
-}
-
-.proyecto-card img {
-    width: 100%;
-    height: 220px; /* Altura fija para las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
-}
-
-.proyecto-info {
-    padding: 1.5rem; /* Espaciado interno */
-}
-
-.proyecto-info h3 {
-    font-family: var(--fuente-titulos);
-    color: var(--color-acento-oliva);
-    font-size: 1.3rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-.proyecto-info p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-```css
-/* ================================================ */
-/* ===== NUEVOS ESTILOS PARA FLUJO (CON ICONOS) ===== */
-/* ================================================ */
-#flujo-trabajo {
-    background-color: var(--color-fondo); 
-}
-
-.subtitulo-flujo {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-top: -1.5rem;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.flujo-container {
-    display: grid;
-    /* 2 columnas en escritorio */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1.5rem;
-}
-
-.flujo-paso {
-    background: var(--color-blanco);
-    border: 1px solid #f0f0f0;
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    /* Centramos todo el contenido del paso */
-    text-align: center; 
-    transition: box-shadow 0.3s ease;
-}
-
-.flujo-paso:hover {
-    box-shadow: 0 6px 15px rgba(0,0,0,0.07); /* Efecto al pasar el mouse */
-}
-
-/* Este es el estilo para los nuevos iconos */
-.flujo-icono {
-    font-size: 2.5rem; /* Icono grande */
-    color: var(--color-acento-oliva);
-    margin-bottom: 1rem;
-}
-
-.flujo-paso h3 {
-    font-family: var(--fuente-principal); /* Usamos la fuente principal */
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: var(--color-texto);
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-.flujo-paso p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-/* --- CÓDIGO RESPONSIVE (Móviles) --- */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-    main {
-        margin: 10px;
-        padding: 0 15px;
-    }
-    h2 {
-        font-size: 1.8rem;
-    }
-    /* --- Estilos responsive para Flujo de Trabajo --- */
-    .flujo-container {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
-        gap: 1rem;
-    }
-    
-/* ================================================ */
-/* ===== NUEVOS ESTILOS PARA FILTRO CDMX ===== */
-/* ================================================ */
+/* --- Filtro CDMX (Aviso) --- */
 .aviso-ubicacion {
-    background-color: #fefef5; /* Un fondo amarillo muy pálido */
+    background-color: #fefef5;
     border: 1px solid #e6dbb8;
-    border-left: 5px solid var(--color-acento-oliva); /* Acento de color */
+    border-left: 5px solid var(--color-acento-oliva);
     padding: 1rem 1.5rem;
     border-radius: 5px;
     margin-bottom: 1.5rem;
@@ -282,72 +245,98 @@ footer {
 .aviso-ubicacion strong {
     color: var(--color-texto);
 }
-    /* --- Estilos responsive para la galería --- */
+
+/* --- Botones de Contacto (WhatsApp/Llamar) --- */
+.botones-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.botones-contacto a {
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.boton-whatsapp {
+    background-color: #25D366;
+}
+.boton-whatsapp:hover {
+    background-color: #1DA851;
+}
+
+.boton-llamar {
+    background-color: var(--color-acento-oliva);
+}
+.boton-llamar:hover {
+    background-color: var(--color-acento-oscuro);
+}
+
+.o-texto {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Footer (Pie de Página) --- */
+footer {
+    text-align: center;
+    padding: 2.5rem;
+    margin-top: 1rem;
+    color: #888;
+}
+
+/* --- Iconos Sociales (Footer) --- */
+.social-icons {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-size: 1.8rem;
+    margin: 0 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-acento-oliva);
+}
+
+
+/* ================================================ */
+/* ===== CÓDIGO RESPONSIVE (Móviles) ===== */
+/* ================================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    main {
+        margin: 10px;
+        padding: 0 15px;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    /* --- Estilos responsive para Galería --- */
     .proyecto-card {
-        /* En móviles, cada tarjeta ocupa el 100% del ancho */
         flex-basis: 100%; 
     }
+    
+    /* --- Estilos responsive para Flujo de Trabajo --- */
+    .flujo-container {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        gap: 1rem;
+    }
 }
-
-```css
-/* ================================================ */
-/* ===== NUEVOS ESTILOS PARA FLUJO DE TRABAJO ===== */
-/* ================================================ */
-#flujo-trabajo {
-    /* Usamos el color de fondo para alternar con el blanco */
-    background-color: var(--color-fondo); 
-}
-
-.subtitulo-flujo {
-    text-align: center;
-    font-size: 1.1rem;
-    margin-top: -1.5rem;
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.flujo-container {
-    display: grid;
-    /* Creamos una cuadrícula de 2 columnas */
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 1.5rem; /* Espacio entre las tarjetas */
-}
-
-.flujo-paso {
-    background: var(--color-blanco);
-    border: 1px solid #f0f0f0;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    /* Alinear el texto a la izquierda para un look profesional */
-    text-align: left; 
-}
-
-.paso-numero {
-    display: block;
-    font-family: var(--fuente-titulos);
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--color-acento-oliva);
-    margin-bottom: 0.5rem;
-}
-
-.flujo-paso h3 {
-    font-family: var(--fuente-principal);
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: var(--color-texto);
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-.flujo-paso p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-
-
-
