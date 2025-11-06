@@ -200,6 +200,7 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en móviles */
         gap: 1rem;
     }
+    
 /* ================================================ */
 /* ===== NUEVOS ESTILOS PARA FILTRO CDMX ===== */
 /* ================================================ */
@@ -227,6 +228,65 @@ footer {
         /* En móviles, cada tarjeta ocupa el 100% del ancho */
         flex-basis: 100%; 
     }
+}
+
+```css
+/* ================================================ */
+/* ===== NUEVOS ESTILOS PARA FLUJO DE TRABAJO ===== */
+/* ================================================ */
+#flujo-trabajo {
+    /* Usamos el color de fondo para alternar con el blanco */
+    background-color: var(--color-fondo); 
+}
+
+.subtitulo-flujo {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flujo-container {
+    display: grid;
+    /* Creamos una cuadrícula de 2 columnas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+}
+
+.flujo-paso {
+    background: var(--color-blanco);
+    border: 1px solid #f0f0f0;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    /* Alinear el texto a la izquierda para un look profesional */
+    text-align: left; 
+}
+
+.paso-numero {
+    display: block;
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-acento-oliva);
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso h3 {
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso p {
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
 
