@@ -182,7 +182,27 @@ footer {
     margin-bottom: 0;
 }
 
+```css
+/* ================================================ */
+/* ===== NUEVOS ESTILOS PARA ICONOS SOCIALES ===== */
+/* ================================================ */
+.social-icons {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Espacio sobre el texto de copyright */
+    margin-top: 1rem;
+}
 
+.social-icons a {
+    text-decoration: none;
+    color: var(--color-texto); /* Usa el color gris oscuro principal */
+    font-size: 1.8rem; /* Tamaño del icono */
+    margin: 0 0.75rem; /* Espacio entre los iconos */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-acento-oliva); /* Cambia al color acento al pasar el mouse */
+}
 /* --- CÓDIGO RESPONSIVE (Móviles) --- */
 @media (max-width: 768px) {
     header h1 {
@@ -288,5 +308,6 @@ footer {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
 
 
