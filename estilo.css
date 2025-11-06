@@ -184,24 +184,63 @@ footer {
 
 ```css
 /* ================================================ */
-/* ===== NUEVOS ESTILOS PARA ICONOS SOCIALES ===== */
+/* ===== NUEVOS ESTILOS PARA FLUJO (CON ICONOS) ===== */
 /* ================================================ */
-.social-icons {
+#flujo-trabajo {
+    background-color: var(--color-fondo); 
+}
+
+.subtitulo-flujo {
     text-align: center;
-    margin-bottom: 1.5rem; /* Espacio sobre el texto de copyright */
-    margin-top: 1rem;
+    font-size: 1.1rem;
+    margin-top: -1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.social-icons a {
-    text-decoration: none;
-    color: var(--color-texto); /* Usa el color gris oscuro principal */
-    font-size: 1.8rem; /* Tamaño del icono */
-    margin: 0 0.75rem; /* Espacio entre los iconos */
-    transition: color 0.3s ease;
+.flujo-container {
+    display: grid;
+    /* 2 columnas en escritorio */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1.5rem;
 }
 
-.social-icons a:hover {
-    color: var(--color-acento-oliva); /* Cambia al color acento al pasar el mouse */
+.flujo-paso {
+    background: var(--color-blanco);
+    border: 1px solid #f0f0f0;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    /* Centramos todo el contenido del paso */
+    text-align: center; 
+    transition: box-shadow 0.3s ease;
+}
+
+.flujo-paso:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.07); /* Efecto al pasar el mouse */
+}
+
+/* Este es el estilo para los nuevos iconos */
+.flujo-icono {
+    font-size: 2.5rem; /* Icono grande */
+    color: var(--color-acento-oliva);
+    margin-bottom: 1rem;
+}
+
+.flujo-paso h3 {
+    font-family: var(--fuente-principal); /* Usamos la fuente principal */
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-texto);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.flujo-paso p {
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 /* --- CÓDIGO RESPONSIVE (Móviles) --- */
 @media (max-width: 768px) {
@@ -308,6 +347,7 @@ footer {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
 
 
 
