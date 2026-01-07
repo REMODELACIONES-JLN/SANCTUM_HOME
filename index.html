@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+<head><!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,24 +41,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Ajustes Finos */
+        /* Estilos Personalizados Críticos */
         body { font-family: 'Montserrat', sans-serif; background-color: #F8F7F2; color: #3C3C3C; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* Efecto Parallax sutil */
         }
 
         .whatsapp-float {
             position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px;
             background-color: #25D366; color: #FFF; border-radius: 50%;
-            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999;
+            text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
             z-index: 100; display: flex; align-items: center; justify-content: center;
             transition: transform 0.3s ease;
         }
@@ -65,36 +66,57 @@
 </head>
 <body class="antialiased">
 
-    <header class="bg-sanctum-sand/90 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#inicio" class="text-2xl font-bold font-serif text-sanctum-green tracking-widest">
-                SANCTUM HOME
-            </a>
-            
-            <ul class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
-                <li><a href="#inicio" class="text-sanctum-dark hover:text-sanctum-green transition-colors">INICIO</a></li>
-                <li><a href="#manifiesto" class="text-sanctum-dark hover:text-sanctum-green transition-colors">MANIFIESTO</a></li>
-                <li><a href="#proceso" class="text-sanctum-dark hover:text-sanctum-green transition-colors">EL PROCESO</a></li>
-                <li><a href="#servicios" class="text-sanctum-dark hover:text-sanctum-green transition-colors">SOLUCIONES</a></li>
-            </ul>
-            
-            <a href="#contacto" class="bg-sanctum-green text-white px-6 py-2 rounded-sm font-semibold hover:bg-opacity-90 transition-colors text-sm tracking-wide">
-                AGENDAR TALLER
-            </a>
+    <header class="bg-sanctum-sand/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#inicio" class="text-2xl font-bold font-serif text-sanctum-green tracking-widest z-50 relative">
+                    SANCTUM HOME
+                </a>
+                
+                <ul class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
+                    <li><a href="#inicio" class="text-sanctum-dark hover:text-sanctum-green transition-colors">INICIO</a></li>
+                    <li><a href="#manifiesto" class="text-sanctum-dark hover:text-sanctum-green transition-colors">MANIFIESTO</a></li>
+                    <li><a href="#proceso" class="text-sanctum-dark hover:text-sanctum-green transition-colors">EL PROCESO</a></li>
+                    <li><a href="#servicios" class="text-sanctum-dark hover:text-sanctum-green transition-colors">SOLUCIONES</a></li>
+                    <li>
+                        <a href="#contacto" class="bg-sanctum-green text-white px-6 py-2 rounded-sm font-semibold hover:bg-opacity-90 transition-colors text-sm tracking-wide ml-4">
+                            AGENDAR TALLER
+                        </a>
+                    </li>
+                </ul>
+
+                <button id="mobile-menu-btn" class="md:hidden text-sanctum-dark focus:outline-none z-50 relative p-2">
+                    <i class="fas fa-bars fa-2x"></i>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="fixed inset-0 bg-sanctum-sand flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-40">
+                <ul class="text-center space-y-8 text-xl font-serif text-sanctum-green">
+                    <li><a href="#inicio" class="mobile-link hover:text-sanctum-dark block py-2">INICIO</a></li>
+                    <li><a href="#manifiesto" class="mobile-link hover:text-sanctum-dark block py-2">MANIFIESTO</a></li>
+                    <li><a href="#proceso" class="mobile-link hover:text-sanctum-dark block py-2">EL PROCESO</a></li>
+                    <li><a href="#servicios" class="mobile-link hover:text-sanctum-dark block py-2">SOLUCIONES</a></li>
+                    <li>
+                        <a href="#contacto" class="mobile-link inline-block bg-sanctum-green text-white px-8 py-3 mt-4 rounded-sm text-base font-sans tracking-widest shadow-lg">
+                            AGENDAR TALLER
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="inicio" class="hero-bg h-[90vh] flex items-center justify-center text-white text-center px-4">
             <div class="container mx-auto">
-                <p class="text-sm md:text-base tracking-[0.3em] mb-4 uppercase opacity-90">Arquitectura & Paz Mental</p>
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium mb-6 leading-tight">
+                <p class="text-sm md:text-base tracking-[0.3em] mb-4 uppercase opacity-90 drop-shadow-md">Arquitectura & Paz Mental</p>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium mb-6 leading-tight drop-shadow-lg">
                     Tu hogar no debería<br>ser una fuente de estrés.
                 </h1>
-                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light mb-10 opacity-90">
+                <p class="text-lg md:text-xl max-w-2xl mx-auto font-light mb-10 opacity-90 drop-shadow-md">
                     Rechazamos el "Lujo Opaco". Diseñamos refugios con inversión a libro abierto y cero sorpresas.
                 </p>
-                <a href="#contacto" class="bg-white text-sanctum-green px-8 py-4 rounded-sm font-bold text-sm tracking-widest hover:bg-gray-100 transition-colors inline-block">
+                <a href="#contacto" class="bg-white text-sanctum-green px-8 py-4 rounded-sm font-bold text-sm tracking-widest hover:bg-gray-100 transition-colors inline-block shadow-lg">
                     SOLICITAR DIAGNÓSTICO
                 </a>
             </div>
@@ -201,7 +223,7 @@
 
         <section id="contacto" class="py-24 bg-sanctum-sand">
             <div class="container mx-auto px-6 max-w-4xl">
-                <div class="bg-white p-8 md:p-12 shadow-2xl">
+                <div class="bg-white p-8 md:p-12 shadow-2xl rounded-sm">
                     <div class="text-center mb-10">
                         <h2 class="text-3xl md:text-4xl font-serif text-sanctum-green mb-4">Agende su "Taller de Santuario"</h2>
                         <p class="text-gray-600">Solo aceptamos 4 proyectos al mes para garantizar la excelencia. El diagnóstico inicial no tiene costo.</p>
@@ -210,7 +232,6 @@
                     <form action="https://formspree.io/f/xrbownaa" method="POST" class="space-y-6">
                         
                         <input type="hidden" name="_subject" value="Nuevo Lead de Sanctum Home">
-                        
                         <input type="text" name="_gotcha" style="display:none">
 
                         <div class="grid md:grid-cols-2 gap-6">
@@ -250,7 +271,7 @@
                             <textarea name="mensaje" rows="3" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 focus:border-sanctum-green focus:outline-none transition-colors"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full bg-sanctum-green text-white font-bold py-4 hover:bg-opacity-90 transition-opacity tracking-widest text-sm uppercase">
+                        <button type="submit" class="w-full bg-sanctum-green text-white font-bold py-4 hover:bg-opacity-90 transition-opacity tracking-widest text-sm uppercase shadow-md">
                             SOLICITAR DIAGNÓSTICO
                         </button>
                         <p class="text-xs text-center text-gray-400 mt-4">Sus datos son tratados con estricta confidencialidad.</p>
@@ -267,7 +288,7 @@
                 <a href="https://instagram.com/sanctumhome.oficial" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="https://pinterest.com/SANCTUM_HOME/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-pinterest fa-lg"></i></a>
             </div>
-            <p class="text-gray-500 text-sm">© 2025 SANCTUM HOME. Honestidad Radical.</p>
+            <p class="text-gray-500 text-sm">© 2026 SANCTUM HOME. Honestidad Radical.</p>
         </div>
     </footer>
 
@@ -276,6 +297,38 @@
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        // Lógica del Menú Hamburguesa
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+        const links = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('opacity-0');
+            menu.classList.toggle('pointer-events-none');
+            
+            // Cambio de ícono (Hamburguesa <-> X)
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Cerrar al hacer clic en un enlace
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('opacity-0');
+                menu.classList.add('pointer-events-none');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
 
 </body>
 </html>
