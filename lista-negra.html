@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONFIDENCIAL | La Lista Negra - SANCTUM HOME</title>
+    
+    <meta property="og:title" content="CONFIDENCIAL: La Lista Negra de la Remodelación">
+    <meta property="og:description" content="Evita las trampas del 'Lujo Opaco'. Descarga la guía de Honestidad Radical de Sanctum Home.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://remodelaciones-jln.github.io/SANCTUM_HOME/lista-negra.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- SISTEMA DE DISEÑO SANCTUM --- */
+        :root {
+            --bg-paper: #F9F8F4;       
+            --ink-primary: #2C2C2C;    
+            --sanctum-green: #5A6955; 
+            --gold-accent: #D4AF37;    
+            --alert-red: #8B2E2E;      
+            --white: #FFFFFF;
+            --light-gray: #E5E5E5;
+        }
+
+        body {
+            background-color: #DCDCDC; /* Corregido */
+            background: linear-gradient(to bottom, #EAEAE5, #D8D8D0);
+            font-family: 'Montserrat', sans-serif;
+            color: var(--ink-primary);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Botón de regreso discreto */
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: var(--sanctum-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 10;
+        }
+        .back-link:hover { color: var(--gold-accent); }
+
+        /* Efecto Hoja de Papel Físico */
+        .document-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-paper);
+            padding: 80px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
+            position: relative;
+        }
+
+        /* Marca de Agua */
+        .document-wrapper::before {
+            content: "CONFIDENCIAL";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 8vw; /* Ajustable al ancho */
+            color: rgba(0,0,0,0.03);
+            font-weight: 700;
+            pointer-events: none;
+            z-index: 0;
+            white-space: nowrap;
+        }
+
+        /* --- TIPOGRAFÍA --- */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--sanctum-green);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 { font-size: 3rem; margin: 0; line-height: 1; text-align: center; }
+        h1 span { display: block; font-size: 1rem; font-family: 'Montserrat', sans-serif; letter-spacing: 5px; color: var(--gold-accent); margin-bottom: 15px; text-transform: uppercase; }
+        
+        h2 { 
+            font-size: 1.8rem; 
+            margin-top: 60px; 
+            border-bottom: 2px solid var(--light-gray); 
+            padding-bottom: 10px;
+        }
+
+        p { font-weight: 400; margin-bottom: 20px; z-index: 1; position: relative; color: #444; }
+
+        /* --- SECCIÓN 1: LA TABLA (BLACKLIST) --- */
+        .blacklist-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            margin-top: 30px;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .blacklist-table th {
+            text-align: left;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            padding: 10px 20px;
+        }
+
+        .blacklist-table td {
+            background: white;
+            padding: 20px;
+            vertical-align: middle;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .blacklist-table tr td:first-child {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--sanctum-green);
+            font-weight: 700;
+            border-left: 4px solid transparent;
+        }
+
+        .col-trap { border-left: 4px solid var(--alert-red) !important; color: var(--alert-red); font-size: 0.9rem; }
+        .col-sanctum { border-left: 4px solid var(--gold-accent) !important; background-color: #FAFAF8 !important; font-size: 0.9rem; color: var(--sanctum-green); }
+
+        /* --- SECCIÓN 2: SEMÁFORO --- */
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .material-card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            transition: transform 0.3s;
+        }
+        .material-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            border-radius: 2px;
+        }
+        
+        .badge-red { background: #FDECEC; color: var(--alert-red); }
+        .badge-yellow { background: #FFF8E1; color: #F57C00; }
+        .badge-green { background: #E8F5E9; color: var(--sanctum-green); }
+
+        .material-name { font-weight: 600; display: block; margin-bottom: 5px; }
+        .material-desc { font-size: 0.85rem; color: #666; }
+
+        /* --- SECCIÓN 3: LEGAL --- */
+        .legal-box {
+            background-color: #F4F4F4;
+            border: 1px dashed #999;
+            padding: 30px;
+            position: relative;
+            margin-top: 30px;
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: var(--sanctum-green);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .copy-btn:hover { background: var(--gold-accent); color: var(--ink-primary); }
+
+        /* --- CTA --- */
+        .cta-section {
+            margin-top: 80px;
+            text-align: center;
+            background: var(--ink-primary);
+            color: white;
+            padding: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-section h3 { color: var(--gold-accent); font-style: italic; margin-top: 0; font-family: 'Playfair Display', serif; }
+        .cta-section p { color: #ccc; margin-bottom: 30px; }
+
+        .btn-gold {
+            display: inline-block;
+            background: var(--gold-accent);
+            color: var(--ink-primary);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        
+        .btn-gold:hover { background: white; transform: translateY(-2px); }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            .document-wrapper { padding: 40px 20px; }
+            h1 { font-size: 2.2rem; }
+            .blacklist-table th { display: none; }
+            .blacklist-table td { display: block; width: 100%; border: none; padding: 10px 0; }
+            .blacklist-table tr { display: block; margin-bottom: 20px; border: 1px solid #eee; padding: 15px; }
+            .col-trap, .col-sanctum { border-left: none !important; border-top: 4px solid; padding-top: 15px !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> SANCTUM HOME</a>
+
+    <div class="document-wrapper">
+        <header style="text-align: center; margin-bottom: 50px;">
+            <h1><span>Expediente Sanctum</span>Lista Negra 2025</h1>
+            <p style="max-width: 600px; margin: 20px auto; color: #666; font-style: italic;">
+                "En el mercado del 'Lujo Opaco', lo que no ves es lo que más te cuesta."
+            </p>
+            <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; color: var(--sanctum-green);">
+                Guía de Honestidad Radical
+            </p>
+        </header>
+
+        <h2>01. El Detector de Mentiras</h2>
+        <p>Si escuchas frases de la columna izquierda, huye. Si escuchas la derecha, estás seguro.</p>
+        
+        <table class="blacklist-table">
+            <thead>
+                <tr>
+                    <th width="25%">Concepto</th>
+                    <th>⚠️ La Trampa (Bandera Roja)</th>
+                    <th>✓ Estándar Sanctum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Carpintería</td>
+                    <td class="col-trap">"Es madera comprimida estándar / Aglomerado" (12mm). <br><strong style="color:black">Riesgo:</strong> Se pandea en 8 meses con la humedad.</td>
+                    <td class="col-sanctum">MDF Hidrófugo de 15-18mm o Triplay. <br><strong style="color:black">Verdad:</strong> Resistencia estructural y a la humedad.</td>
+                </tr>
+                <tr>
+                    <td>Cubiertas</td>
+                    <td class="col-trap">"Cuarzo económico" ($3,000/ml). <br><strong style="color:black">Riesgo:</strong> Es resina china que se mancha con limón.</td>
+                    <td class="col-sanctum">Cuarzo Certificado (Caesarstone / Silestone). <br><strong style="color:black">Verdad:</strong> Garantía de fábrica por escrito.</td>
+                </tr>
+                <tr>
+                    <td>Presupuesto</td>
+                    <td class="col-trap">"Costo Global Estimado". <br><strong style="color:black">Riesgo:</strong> Sobrecostos ocultos a mitad de obra.</td>
+                    <td class="col-sanctum">Modelo "Libro Abierto" (Open Book). <br><strong style="color:black">Verdad:</strong> Ves Material + Mano de Obra + Fee fijo.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>02. Semáforo de Materiales</h2>
+        <p>Aprende a diferenciar visualmente la calidad de la estructura interna (el cuerpo de tus muebles).</p>
+        
+        <div class="material-grid">
+            <div class="material-card">
+                <span class="badge badge-red">EVITAR ⛔</span>
+                <span class="material-name">Aglomerado / MDP</span>
+                <span class="material-desc">Partículas grandes de madera pegadas. Se desmorona con el agua. Borde rugoso.</span>
+            </div>
+            <div class="material-card">
+                <span class="badge badge-yellow">PRECAUCIÓN ⚠️</span>
+                <span class="material-name">MDF Estándar</span>
+                <span class="material-desc">Color café claro. Superficie lisa, buena para pintar, pero se hincha si hay fuga de agua.</span>
+            </div>
+            <div class="material-card">
+                <span class="badge badge-green">APROBADO ✅</span>
+                <span class="material-name">MDF Hidrófugo</span>
+                <span class="material-desc">Color verdoso en el interior. Fibras de alta densidad resistentes a la humedad extrema.</span>
+            </div>
+        </div>
+
+        <h2>03. La "Cláusula de Sangrado"</h2>
+        <p>Copia y pega este texto legal en tu contrato. Si tu contratista se niega a firmarlo, <strong>no confía en sus propios tiempos.</strong></p>
+
+        <div class="legal-box">
+            <button class="copy-btn" onclick="copyClause()"> <i class="fas fa-copy"></i> Copiar Texto</button>
+            <p id="clauseText" style="margin:0;">
+                <strong>CLÁUSULA DE PENALIZACIÓN POR INCUMPLIMIENTO DE PLAZO.</strong><br><br>
+                Las partes acuerdan que la fecha de entrega final, entendida como la total funcionalidad y limpieza fina del proyecto, es el día [FECHA].<br><br>
+                En caso de retraso no imputable al CLIENTE ni a causas de Fuerza Mayor comprobables, el CONTRATISTA acepta una penalización automática del <strong>0.5% (punto cinco por ciento)</strong> del monto total del contrato por cada día natural de retraso.<br><br>
+                Dicha penalización será descontada directamente del pago final o saldo pendiente, sin necesidad de juicio previo.
+            </p>
+        </div>
+
+        <div class="cta-section">
+            <h3>¿Quieres ver cómo aplicamos esto en la vida real?</h3>
+            <p>En Sanctum Home, firmamos esta cláusula y abrimos nuestros libros antes de que nos pagues un peso.</p>
+            <a href="https://wa.me/525573794436?text=Hola,%20vi%20la%20Lista%20Negra%20y%20quiero%20blindar%20mi%20proyecto." class="btn-gold" target="_blank">
+                AGENDA TU DIAGNÓSTICO
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #999; font-size: 0.8rem;">
+            &copy; 2026 Sanctum Home. Documento confidencial de uso exclusivo para clientes.
+        </div>
+    </div>
+
+    <script>
+        function copyClause() {
+            const text = document.getElementById("clauseText").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.innerHTML = '<i class="fas fa-check"></i> Copiado';
+                btn.style.background = '#333';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Texto';
+                    btn.style.background = '#5A6955';
+                }, 2000);
+            });
+        }
+    </script>
+
+</body>
+</html>
