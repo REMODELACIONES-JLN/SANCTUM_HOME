@@ -8,7 +8,7 @@
     <meta name="p:domain_verify" content="79c865492739673d4f004443f2e0162e"/>
 
     <meta property="og:title" content="SANCTUM HOME | Honestidad Radical">
-    <meta property="og:description" content="Arquitectura & Paz Mental. Tu hogar no debería ser una fuente de estrés. Agenda tu diagnóstico.">
+    <meta property="og:description" content="Arquitectura & Paz Mental. Tu hogar no debería ser una fuente de estrés.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
     <meta property="og:url" content="https://remodelaciones-jln.github.io/SANCTUM_HOME/">
     <meta property="og:type" content="website">
@@ -21,9 +21,9 @@
                 extend: {
                     colors: {
                         sanctum: {
-                            green: '#5A6955', /* Verde Olivo */
-                            sand: '#F8F7F2',  /* Arena Suave */
-                            dark: '#3C3C3C',  /* Gris Piedra */
+                            green: '#5A6955',
+                            sand: '#F8F7F2',
+                            dark: '#3C3C3C',
                             white: '#FFFFFF',
                         }
                     },
@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Estilos Personalizados */
         body { font-family: 'Montserrat', sans-serif; background-color: #F8F7F2; color: #3C3C3C; }
         
         .hero-bg {
@@ -64,10 +63,10 @@
 </head>
 <body class="antialiased">
 
-    <header class="bg-[#F8F7F2]/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200 transition-all duration-300">
+    <header class="bg-[#F8F7F2]/95 backdrop-blur-md sticky top-0 z-40 shadow-sm border-b border-gray-200">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#inicio" class="text-2xl font-bold font-serif text-[#5A6955] tracking-widest relative z-50">
+                <a href="#inicio" class="text-2xl font-bold font-serif text-[#5A6955] tracking-widest">
                     SANCTUM HOME
                 </a>
                 
@@ -83,28 +82,9 @@
                     </li>
                 </ul>
 
-                <button id="mobile-menu-btn" class="md:hidden text-[#3C3C3C] focus:outline-none relative z-50 p-2">
+                <button id="mobile-menu-btn" class="md:hidden text-[#3C3C3C] focus:outline-none p-2">
                     <i class="fas fa-bars fa-2x"></i>
                 </button>
-            </div>
-
-            <div id="mobile-menu" class="fixed inset-0 bg-[#F8F7F2] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-[60]">
-                
-                <button id="close-menu-btn" class="absolute top-6 right-6 text-[#3C3C3C] focus:outline-none p-4 hover:text-[#5A6955] transition-colors">
-                    <i class="fas fa-times fa-2x"></i>
-                </button>
-
-                <ul class="text-center space-y-8 text-xl font-serif text-[#5A6955]">
-                    <li><a href="#inicio" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">INICIO</a></li>
-                    <li><a href="#manifiesto" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">MANIFIESTO</a></li>
-                    <li><a href="#proceso" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">EL PROCESO</a></li>
-                    <li><a href="#servicios" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">SOLUCIONES</a></li>
-                    <li>
-                        <a href="#contacto" class="mobile-link inline-block bg-[#5A6955] text-white px-8 py-3 mt-4 rounded-sm text-base font-sans tracking-widest shadow-lg hover:bg-[#3C3C3C] transition-colors">
-                            AGENDAR TALLER
-                        </a>
-                    </li>
-                </ul>
             </div>
         </nav>
     </header>
@@ -128,7 +108,6 @@
         <section class="py-20 bg-white">
              <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
-                    
                     <div>
                         <h2 class="text-4xl font-serif text-sanctum-green mb-6">El "Lujo Opaco" se acabó.</h2>
                         <p class="text-lg text-gray-600 mb-4 leading-relaxed">
@@ -137,13 +116,11 @@
                         <p class="text-lg text-gray-600 font-medium mb-8">
                             Usted no necesita más "vendedores de cocinas". Necesita un socio que le diga la verdad radical.
                         </p>
-                        
                         <a href="lista-negra.html" class="inline-flex items-center px-6 py-3 border-2 border-sanctum-green text-sanctum-green font-bold tracking-widest hover:bg-sanctum-green hover:text-white transition-colors uppercase text-sm rounded-sm group">
                             <i class="fas fa-unlock-alt mr-3 group-hover:rotate-12 transition-transform"></i> 
                             Ver "La Lista Negra"
                         </a>
                     </div>
-
                     <div class="grid gap-6">
                         <div class="bg-sanctum-sand p-6 border-l-4 border-sanctum-green shadow-sm">
                             <h3 class="text-xl font-bold text-sanctum-green mb-2">1. Honestidad Radical</h3>
@@ -229,11 +206,10 @@
                 <div class="bg-white p-8 md:p-12 shadow-2xl rounded-sm">
                     <div class="text-center mb-10">
                         <h2 class="text-3xl md:text-4xl font-serif text-sanctum-green mb-4">Agende su "Taller de Santuario"</h2>
-                        <p class="text-gray-600">Solo aceptamos 4 proyectos al mes para garantizar la excelencia. El diagnóstico inicial no tiene costo.</p>
+                        <p class="text-gray-600">Solo aceptamos 4 proyectos al mes.</p>
                     </div>
 
                     <form action="https://formspree.io/f/xrbownaa" method="POST" class="space-y-6">
-                        
                         <input type="hidden" name="_subject" value="Nuevo Lead de Sanctum Home">
                         <input type="text" name="_gotcha" style="display:none">
 
@@ -277,7 +253,6 @@
                         <button type="submit" class="w-full bg-sanctum-green text-white font-bold py-4 hover:bg-opacity-90 transition-opacity tracking-widest text-sm uppercase shadow-md">
                             SOLICITAR DIAGNÓSTICO
                         </button>
-                        <p class="text-xs text-center text-gray-400 mt-4">Sus datos son tratados con estricta confidencialidad.</p>
                     </form>
                 </div>
             </div>
@@ -291,7 +266,7 @@
                 <a href="https://instagram.com/sanctumhome.oficial" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
                 <a href="https://pinterest.com/SANCTUM_HOME/" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-pinterest fa-lg"></i></a>
             </div>
-            <p class="text-gray-500 text-sm">© 2026 SANCTUM HOME. Honestidad Radical.</p>
+            <p class="text-gray-500 text-sm">© 2026 SANCTUM HOME.</p>
         </div>
     </footer>
 
@@ -301,6 +276,27 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <div id="mobile-menu" 
+         class="fixed inset-0 flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300"
+         style="background-color: #F8F7F2; z-index: 9999;">
+        
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-[#3C3C3C] focus:outline-none p-4 hover:text-[#5A6955] transition-colors">
+            <i class="fas fa-times fa-2x"></i>
+        </button>
+
+        <ul class="text-center space-y-8 text-xl font-serif text-[#5A6955]">
+            <li><a href="#inicio" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">INICIO</a></li>
+            <li><a href="#manifiesto" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">MANIFIESTO</a></li>
+            <li><a href="#proceso" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">EL PROCESO</a></li>
+            <li><a href="#servicios" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">SOLUCIONES</a></li>
+            <li>
+                <a href="#contacto" class="mobile-link inline-block bg-[#5A6955] text-white px-8 py-3 mt-4 rounded-sm text-base font-sans tracking-widest shadow-lg hover:bg-[#3C3C3C] transition-colors">
+                    AGENDAR TALLER
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const closeBtn = document.getElementById('close-menu-btn');
@@ -308,21 +304,18 @@
         const links = document.querySelectorAll('.mobile-link');
 
         function toggleMenu() {
-            // Lógica simple: Si tiene opacity-0, se la quitamos (mostrar). Si no, se la ponemos (ocultar).
             if (menu.classList.contains('opacity-0')) {
+                // Abrir
                 menu.classList.remove('opacity-0', 'pointer-events-none');
             } else {
+                // Cerrar
                 menu.classList.add('opacity-0', 'pointer-events-none');
             }
         }
 
-        // Abrir (Hamburguesa)
         btn.addEventListener('click', toggleMenu);
-        
-        // Cerrar (Botón X)
         closeBtn.addEventListener('click', toggleMenu);
 
-        // Cerrar automáticamente al hacer clic en un enlace
         links.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.add('opacity-0', 'pointer-events-none');
