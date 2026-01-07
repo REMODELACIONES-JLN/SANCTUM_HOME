@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-<head><!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,21 +42,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* Estilos Personalizados Críticos */
+        /* Estilos Personalizados */
         body { font-family: 'Montserrat', sans-serif; background-color: #F8F7F2; color: #3C3C3C; }
         
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Efecto Parallax sutil */
+            background-attachment: fixed;
         }
 
         .whatsapp-float {
             position: fixed; bottom: 40px; right: 40px; width: 60px; height: 60px;
             background-color: #25D366; color: #FFF; border-radius: 50%;
             text-align: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 100; display: flex; align-items: center; justify-content: center;
+            z-index: 50; display: flex; align-items: center; justify-content: center;
             transition: transform 0.3s ease;
         }
         .whatsapp-float:hover { transform: scale(1.1); }
@@ -66,38 +64,43 @@
 </head>
 <body class="antialiased">
 
-    <header class="bg-sanctum-sand/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200 transition-all duration-300">
+    <header class="bg-[#F8F7F2]/95 backdrop-blur-md sticky top-0 z-50 shadow-sm border-b border-gray-200 transition-all duration-300">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#inicio" class="text-2xl font-bold font-serif text-sanctum-green tracking-widest z-50 relative">
+                <a href="#inicio" class="text-2xl font-bold font-serif text-[#5A6955] tracking-widest relative z-50">
                     SANCTUM HOME
                 </a>
                 
-                <ul class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center">
-                    <li><a href="#inicio" class="text-sanctum-dark hover:text-sanctum-green transition-colors">INICIO</a></li>
-                    <li><a href="#manifiesto" class="text-sanctum-dark hover:text-sanctum-green transition-colors">MANIFIESTO</a></li>
-                    <li><a href="#proceso" class="text-sanctum-dark hover:text-sanctum-green transition-colors">EL PROCESO</a></li>
-                    <li><a href="#servicios" class="text-sanctum-dark hover:text-sanctum-green transition-colors">SOLUCIONES</a></li>
+                <ul class="hidden md:flex space-x-8 text-sm font-medium tracking-wide items-center text-[#3C3C3C]">
+                    <li><a href="#inicio" class="hover:text-[#5A6955] transition-colors">INICIO</a></li>
+                    <li><a href="#manifiesto" class="hover:text-[#5A6955] transition-colors">MANIFIESTO</a></li>
+                    <li><a href="#proceso" class="hover:text-[#5A6955] transition-colors">EL PROCESO</a></li>
+                    <li><a href="#servicios" class="hover:text-[#5A6955] transition-colors">SOLUCIONES</a></li>
                     <li>
-                        <a href="#contacto" class="bg-sanctum-green text-white px-6 py-2 rounded-sm font-semibold hover:bg-opacity-90 transition-colors text-sm tracking-wide ml-4">
+                        <a href="#contacto" class="bg-[#5A6955] text-white px-6 py-2 rounded-sm font-semibold hover:bg-opacity-90 transition-colors text-sm tracking-wide ml-4">
                             AGENDAR TALLER
                         </a>
                     </li>
                 </ul>
 
-                <button id="mobile-menu-btn" class="md:hidden text-sanctum-dark focus:outline-none z-50 relative p-2">
+                <button id="mobile-menu-btn" class="md:hidden text-[#3C3C3C] focus:outline-none relative z-50 p-2">
                     <i class="fas fa-bars fa-2x"></i>
                 </button>
             </div>
 
-            <div id="mobile-menu" class="fixed inset-0 bg-sanctum-sand flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-40">
-                <ul class="text-center space-y-8 text-xl font-serif text-sanctum-green">
-                    <li><a href="#inicio" class="mobile-link hover:text-sanctum-dark block py-2">INICIO</a></li>
-                    <li><a href="#manifiesto" class="mobile-link hover:text-sanctum-dark block py-2">MANIFIESTO</a></li>
-                    <li><a href="#proceso" class="mobile-link hover:text-sanctum-dark block py-2">EL PROCESO</a></li>
-                    <li><a href="#servicios" class="mobile-link hover:text-sanctum-dark block py-2">SOLUCIONES</a></li>
+            <div id="mobile-menu" class="fixed inset-0 bg-[#F8F7F2] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-[60]">
+                
+                <button id="close-menu-btn" class="absolute top-6 right-6 text-[#3C3C3C] focus:outline-none p-4 hover:text-[#5A6955] transition-colors">
+                    <i class="fas fa-times fa-2x"></i>
+                </button>
+
+                <ul class="text-center space-y-8 text-xl font-serif text-[#5A6955]">
+                    <li><a href="#inicio" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">INICIO</a></li>
+                    <li><a href="#manifiesto" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">MANIFIESTO</a></li>
+                    <li><a href="#proceso" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">EL PROCESO</a></li>
+                    <li><a href="#servicios" class="mobile-link hover:text-[#3C3C3C] block py-2 transition-colors">SOLUCIONES</a></li>
                     <li>
-                        <a href="#contacto" class="mobile-link inline-block bg-sanctum-green text-white px-8 py-3 mt-4 rounded-sm text-base font-sans tracking-widest shadow-lg">
+                        <a href="#contacto" class="mobile-link inline-block bg-[#5A6955] text-white px-8 py-3 mt-4 rounded-sm text-base font-sans tracking-widest shadow-lg hover:bg-[#3C3C3C] transition-colors">
                             AGENDAR TALLER
                         </a>
                     </li>
@@ -299,37 +302,33 @@
     </a>
 
     <script>
-        // Lógica del Menú Hamburguesa
         const btn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
         const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
         const links = document.querySelectorAll('.mobile-link');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('opacity-0');
-            menu.classList.toggle('pointer-events-none');
-            
-            // Cambio de ícono (Hamburguesa <-> X)
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
+        function toggleMenu() {
+            // Lógica simple: Si tiene opacity-0, se la quitamos (mostrar). Si no, se la ponemos (ocultar).
+            if (menu.classList.contains('opacity-0')) {
+                menu.classList.remove('opacity-0', 'pointer-events-none');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                menu.classList.add('opacity-0', 'pointer-events-none');
             }
-        });
+        }
 
-        // Cerrar al hacer clic en un enlace
+        // Abrir (Hamburguesa)
+        btn.addEventListener('click', toggleMenu);
+        
+        // Cerrar (Botón X)
+        closeBtn.addEventListener('click', toggleMenu);
+
+        // Cerrar automáticamente al hacer clic en un enlace
         links.forEach(link => {
             link.addEventListener('click', () => {
-                menu.classList.add('opacity-0');
-                menu.classList.add('pointer-events-none');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                menu.classList.add('opacity-0', 'pointer-events-none');
             });
         });
     </script>
 
 </body>
 </html>
-
