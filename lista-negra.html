@@ -6,349 +6,205 @@
     <title>CONFIDENCIAL | La Lista Negra - SANCTUM HOME</title>
     
     <meta property="og:title" content="CONFIDENCIAL: La Lista Negra de la Remodelación">
-    <meta property="og:description" content="Evita las trampas del 'Lujo Opaco'. Descarga la guía de Honestidad Radical de Sanctum Home.">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
-    <meta property="og:url" content="https://remodelaciones-jln.github.io/SANCTUM_HOME/lista-negra.html">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <meta property="og:description" content="5 Trampas financieras que tu arquitecto no te dice. Descarga la guía de Blindaje Patrimonial.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'sanctum-green': '#5A6955',
-                        'sanctum-sand': '#F9F8F4',
-                        'gold-accent': '#D4AF37',
-                        'alert-red': '#8B2E2E',
-                        'stone-dark': '#2C2C2C',
-                    },
-                    fontFamily: {
-                        sans: ['Montserrat', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sanctum: {
+                            dark: '#0c0a09', // Stone 950
+                            card: '#1c1917', // Stone 900
+                            green: '#5A6955',
+                            gold: '#D4AF37', // Dorado para acentos premium
+                            light: '#F8F7F2',
+                            red: '#7f1d1d'
+                        },
+                        fontFamily: {
+                            serif: ['Playfair Display', 'serif'],
+                            sans: ['Montserrat', 'sans-serif']
+                        }
                     }
                 }
             }
         }
     </script>
-
+    
     <style>
-        /* --- ESTILOS PERSONALIZADOS (Legacy & Paper Effect) --- */
-        body {
-            background-color: #DCDCDC;
-            background: linear-gradient(to bottom, #EAEAE5, #D8D8D0);
-            /* Tailwind se encarga de las fuentes ahora, pero mantenemos fallback */
-            font-family: 'Montserrat', sans-serif; 
-            padding: 20px;
-            min-height: 100vh;
+        .audit-stamp {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            background: linear-gradient(145deg, #1c1917 0%, #0c0a09 100%);
         }
-
-        /* Efecto Hoja de Papel Físico */
-        .document-wrapper {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #F9F8F4;
-            padding: 60px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15); 
-            position: relative;
-        }
-
-        /* Marca de Agua */
-        .document-wrapper::before {
-            content: "CONFIDENCIAL";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-            font-size: 8vw;
-            color: rgba(0,0,0,0.03);
-            font-weight: 700;
-            pointer-events: none;
-            z-index: 0;
-            white-space: nowrap;
-        }
-
-        /* Botón de regreso */
-        .back-link {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            text-decoration: none;
-            color: #5A6955;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            z-index: 10;
-        }
-        .back-link:hover { color: #D4AF37; }
-
-        /* Semáforo de Materiales (Grid Personalizado) */
-        .material-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .material-card {
-            background: white;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            transition: transform 0.3s;
-        }
-        .material-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-
-        .badge { display: inline-block; padding: 5px 10px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; border-radius: 2px; }
-        .badge-red { background: #FDECEC; color: #8B2E2E; }
-        .badge-yellow { background: #FFF8E1; color: #F57C00; }
-        .badge-green { background: #E8F5E9; color: #5A6955; }
-
-        /* Cláusula Legal */
-        .legal-box {
-            background-color: #F4F4F4;
-            border: 1px dashed #999;
-            padding: 30px;
-            position: relative;
-            margin-top: 30px;
-            font-family: 'Courier Prime', 'Courier New', monospace;
-            font-size: 0.9rem;
-            color: #333;
-        }
-        .copy-btn {
-            position: absolute;
-            top: -15px;
-            right: 20px;
-            background: #5A6955;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s;
-        }
-        .copy-btn:hover { background: #D4AF37; color: #2C2C2C; }
-
-        /* Ajustes Responsivos Generales */
-        @media (max-width: 600px) {
-            .document-wrapper { padding: 30px 20px; margin-top: 60px; }
-            h1 { font-size: 2.2rem !important; }
-        }
+        .red-flag { border-left: 4px solid #ef4444; }
+        .green-flag { border-left: 4px solid #5A6955; }
     </style>
 </head>
-<body class="text-stone-dark antialiased">
+<body class="bg-sanctum-dark text-stone-300 font-sans antialiased selection:bg-sanctum-gold selection:text-black">
 
-    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> SANCTUM HOME</a>
+    <div class="bg-black py-2 text-center border-b border-stone-800">
+        <p class="text-[10px] tracking-[0.3em] uppercase text-stone-500">
+            <i class="fas fa-lock text-sanctum-gold mr-2"></i> Documento de Uso Interno
+        </p>
+    </div>
 
-    <div class="document-wrapper">
-        <header class="text-center mb-12 relative z-10">
-            <h1 class="font-serif text-4xl md:text-5xl text-sanctum-green font-bold leading-tight">
-                <span class="block font-sans text-sm md:text-base text-gold-accent tracking-[0.3em] uppercase mb-4">Expediente Sanctum</span>
-                Lista Negra 2025
-            </h1>
-            <p class="max-w-xl mx-auto mt-6 text-stone-500 italic font-medium">
-                "En el mercado del 'Lujo Opaco', lo que no ves es lo que más te cuesta."
-            </p>
-            <div class="mt-4 inline-block border-b-2 border-sanctum-green/20 pb-1">
-                <p class="text-xs font-bold text-sanctum-green uppercase tracking-widest">
-                    Guía de Honestidad Radical
-                </p>
-            </div>
-        </header>
+    <div class="container mx-auto px-6 py-16 max-w-4xl text-center">
+        <div class="inline-block border border-sanctum-gold px-4 py-1 mb-6 rounded-full">
+            <span class="text-xs text-sanctum-gold tracking-widest uppercase">Estrategia de Blindaje</span>
+        </div>
+        
+        <h1 class="font-serif text-4xl md:text-6xl text-sanctum-light mb-6 leading-tight">
+            LA LISTA NEGRA <br>
+            <span class="text-stone-500 italic text-3xl md:text-4xl">de la Remodelación</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-stone-400 max-w-2xl mx-auto leading-relaxed">
+            Las 5 trampas financieras que los contratistas usan para inflar tu presupuesto. 
+            <br><strong class="text-sanctum-light">Auditado por José Luis Nieves.</strong>
+        </p>
+    </div>
 
-        <section class="mb-16 relative z-10">
-            <h2 class="font-serif text-2xl text-sanctum-green border-b-2 border-gray-200 pb-2 mb-6">
-                01. El Detector de Mentiras
-            </h2>
-            <p class="text-stone-600 mb-8">
-                Si escuchas frases de la zona roja, huye. Si escuchas la zona verde, estás en un refugio seguro.
-            </p>
-            
-            <div class="space-y-8">
-
-                <div class="bg-white rounded-xl shadow-md border border-stone-200 overflow-hidden">
-                    <div class="bg-stone-50 p-4 border-b border-stone-100 flex items-center justify-between">
-                        <h3 class="font-serif text-xl font-bold text-sanctum-green">Carpintería</h3>
-                        <i class="fas fa-hammer text-stone-300"></i>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6 bg-red-50/50 border-b md:border-b-0 md:border-r border-red-100">
-                            <p class="text-stone-600 italic mb-4 text-sm">
-                                <i class="fas fa-quote-left text-alert-red opacity-20 mr-2"></i>
-                                "Es madera comprimida estándar / Aglomerado" (12mm).
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-exclamation-triangle text-alert-red mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-alert-red uppercase tracking-wider mb-1">El Riesgo</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Se pandea en 8 meses con la humedad y pierde rigidez estructural.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="p-6 bg-white">
-                            <p class="text-stone-600 mb-4 text-sm">
-                                MDF Hidrófugo de 15-18mm o Triplay de alta densidad.
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-sanctum-green mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-sanctum-green uppercase tracking-wider mb-1">La Verdad</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Resistencia estructural total y garantía contra humedad.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md border border-stone-200 overflow-hidden">
-                    <div class="bg-stone-50 p-4 border-b border-stone-100 flex items-center justify-between">
-                        <h3 class="font-serif text-xl font-bold text-sanctum-green">Cubiertas</h3>
-                        <i class="fas fa-layer-group text-stone-300"></i>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6 bg-red-50/50 border-b md:border-b-0 md:border-r border-red-100">
-                            <p class="text-stone-600 italic mb-4 text-sm">
-                                <i class="fas fa-quote-left text-alert-red opacity-20 mr-2"></i>
-                                "Cuarzo económico" ($3,000/ml).
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-exclamation-triangle text-alert-red mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-alert-red uppercase tracking-wider mb-1">El Riesgo</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Es resina china de baja calidad; se mancha irremediablemente con limón.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-white">
-                            <p class="text-stone-600 mb-4 text-sm">
-                                Cuarzo Certificado (Caesarstone / Silestone).
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-sanctum-green mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-sanctum-green uppercase tracking-wider mb-1">La Verdad</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Garantía de fábrica por escrito (10-25 años).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-md border border-stone-200 overflow-hidden">
-                    <div class="bg-stone-50 p-4 border-b border-stone-100 flex items-center justify-between">
-                        <h3 class="font-serif text-xl font-bold text-sanctum-green">Presupuesto</h3>
-                        <i class="fas fa-file-invoice-dollar text-stone-300"></i>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6 bg-red-50/50 border-b md:border-b-0 md:border-r border-red-100">
-                            <p class="text-stone-600 italic mb-4 text-sm">
-                                <i class="fas fa-quote-left text-alert-red opacity-20 mr-2"></i>
-                                "Costo Global Estimado".
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-exclamation-triangle text-alert-red mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-alert-red uppercase tracking-wider mb-1">El Riesgo</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Sobrecostos ocultos a mitad de obra. El famoso "salió un detalle".
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="p-6 bg-white">
-                            <p class="text-stone-600 mb-4 text-sm">
-                                Modelo "Libro Abierto" (Open Book).
-                            </p>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-sanctum-green mt-1"></i>
-                                <div>
-                                    <span class="block text-xs font-bold text-sanctum-green uppercase tracking-wider mb-1">La Verdad</span>
-                                    <p class="text-stone-800 font-semibold text-sm leading-relaxed">
-                                        Transparencia total: Ves Material + Mano de Obra + Fee fijo.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="mb-16 relative z-10">
-            <h2 class="font-serif text-2xl text-sanctum-green border-b-2 border-gray-200 pb-2 mb-6">
-                02. Semáforo de Materiales
-            </h2>
-            <p class="text-stone-600">Aprende a diferenciar visualmente la calidad de la estructura interna (el cuerpo de tus muebles).</p>
-            
-            <div class="material-grid">
-                <div class="material-card">
-                    <span class="badge badge-red">EVITAR ⛔</span>
-                    <span class="block font-bold text-stone-800 mb-2">Aglomerado / MDP</span>
-                    <span class="text-sm text-stone-600">Partículas grandes de madera pegadas. Se desmorona con el agua. Borde rugoso.</span>
-                </div>
-                <div class="material-card">
-                    <span class="badge badge-yellow">PRECAUCIÓN ⚠️</span>
-                    <span class="block font-bold text-stone-800 mb-2">MDF Estándar</span>
-                    <span class="text-sm text-stone-600">Color café claro. Superficie lisa, buena para pintar, pero se hincha si hay fuga de agua.</span>
-                </div>
-                <div class="material-card">
-                    <span class="badge badge-green">APROBADO ✅</span>
-                    <span class="block font-bold text-stone-800 mb-2">MDF Hidrófugo</span>
-                    <span class="text-sm text-stone-600">Color verdoso en el interior. Fibras de alta densidad resistentes a la humedad extrema.</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-16 relative z-10">
-            <h2 class="font-serif text-2xl text-sanctum-green border-b-2 border-gray-200 pb-2 mb-6">
-                03. La "Cláusula de Sangrado"
-            </h2>
-            <p class="text-stone-600">Copia y pega este texto legal en tu contrato. Si tu contratista se niega a firmarlo, <strong>no confía en sus propios tiempos.</strong></p>
-
-            <div class="legal-box">
-                <button class="copy-btn" onclick="copyClause()"> <i class="fas fa-copy"></i> Copiar Texto</button>
-                <p id="clauseText" style="margin:0;">
-                    <strong>CLÁUSULA DE PENALIZACIÓN POR INCUMPLIMIENTO DE PLAZO.</strong><br><br>
-                    Las partes acuerdan que la fecha de entrega final, entendida como la total funcionalidad y limpieza fina del proyecto, es el día [FECHA].<br><br>
-                    En caso de retraso no imputable al CLIENTE ni a causas de Fuerza Mayor comprobables, el CONTRATISTA acepta una penalización automática del <strong>1% (uno por ciento)</strong> del monto total del contrato por cada día natural de retraso.<br><br>
-                    Dicha penalización será descontada directamente del pago final o saldo pendiente, sin necesidad de juicio previo.
-                </p>
-            </div>
-        </section>
-
-        <div class="bg-stone-900 text-white p-12 text-center rounded-lg relative z-10">
-            <h3 class="font-serif text-2xl text-gold-accent italic mb-4">¿Quieres ver cómo aplicamos esto en la vida real?</h3>
-            <p class="text-stone-300 mb-8 max-w-lg mx-auto">En Sanctum Home, firmamos esta cláusula y abrimos nuestros libros antes de que nos pagues un peso.</p>
-            <a href="https://wa.me/525573794436?text=Hola,%20vi%20la%20Lista%20Negra%20y%20quiero%20blindar%20mi%20proyecto." 
-               class="inline-block bg-gold-accent text-stone-900 py-4 px-8 font-bold tracking-widest uppercase hover:bg-white hover:text-stone-900 transition-all transform hover:-translate-y-1 rounded shadow-lg">
-                AGENDA TU DIAGNÓSTICO
-            </a>
+    <div class="container mx-auto px-4 max-w-3xl mb-20">
+        <div class="mb-8 flex items-center space-x-4">
+            <div class="h-px bg-stone-700 flex-1"></div>
+            <h2 class="text-sanctum-gold tracking-widest uppercase text-sm font-bold">1. Auditoría de Riesgos</h2>
+            <div class="h-px bg-stone-700 flex-1"></div>
         </div>
 
-        <div class="text-center mt-12 text-stone-400 text-xs">
-            &copy; 2026 Sanctum Home. Documento confidencial de uso exclusivo para clientes.
+        <div class="audit-stamp p-8 rounded-lg mb-8 shadow-2xl">
+            <h3 class="font-serif text-2xl text-white mb-6 flex items-center">
+                <i class="fas fa-hard-hat text-stone-500 mr-4 text-lg"></i>
+                Mano de Obra & Ejecución
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="red-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-red-500 font-bold text-xs tracking-widest mb-2 uppercase">⚠️ La Trampa (Zona Roja)</h4>
+                    <p class="italic text-stone-400 mb-2">"Traigo a mis muchachos de confianza, hacen de todo."</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">El Riesgo:</strong> Contratan 'todólogos' baratos. El mismo que demuele intenta poner mármol. Resultado: Cortes astillados y acabados amateur.
+                    </p>
+                </div>
+                
+                <div class="green-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-sanctum-green font-bold text-xs tracking-widest mb-2 uppercase">🛡️ El Blindaje Sanctum</h4>
+                    <p class="italic text-stone-400 mb-2">"Especialización por Partida (Tier 1)."</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">La Verdad:</strong> Tu casa no es escuela. Solo especialistas tocan tu inversión. El carpintero no pinta; el pintor no hace plomería.
+                    </p>
+                </div>
+            </div>
         </div>
+
+        <div class="audit-stamp p-8 rounded-lg mb-8 shadow-2xl">
+            <h3 class="font-serif text-2xl text-white mb-6 flex items-center">
+                <i class="fas fa-money-bill-wave text-stone-500 mr-4 text-lg"></i>
+                Tesorería & Anticipos
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="red-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-red-500 font-bold text-xs tracking-widest mb-2 uppercase">⚠️ La Trampa (Zona Roja)</h4>
+                    <p class="italic text-stone-400 mb-2">"Necesito el 50% hoy para apartar su lugar, tengo otros clientes interesados."</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">El Riesgo:</strong> Jineteo financiero. Usan tu dinero para tapar los huecos de otra obra atrasada. Tu obra se detiene cuando se acaba TU efectivo.
+                    </p>
+                </div>
+                
+                <div class="green-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-sanctum-green font-bold text-xs tracking-widest mb-2 uppercase">🛡️ El Blindaje Sanctum</h4>
+                    <p class="italic text-stone-400 mb-2">"Inventario Zero & Cuentas Claras."</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">La Verdad:</strong> Compramos el material a TU nombre en 48h. Congelamos la inflación y te entregamos evidencia física inmediata. Tu dinero, tu activo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+         <div class="audit-stamp p-8 rounded-lg mb-8 shadow-2xl">
+            <h3 class="font-serif text-2xl text-white mb-6 flex items-center">
+                <i class="fas fa-file-invoice-dollar text-stone-500 mr-4 text-lg"></i>
+                Presupuesto Real vs. Gancho
+            </h3>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="red-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-red-500 font-bold text-xs tracking-widest mb-2 uppercase">⚠️ La Trampa (Zona Roja)</h4>
+                    <p class="italic text-stone-400 mb-2">"Precio Estimado / Costo por m2"</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">El Riesgo:</strong> Te dan un precio bajo para entrar. Luego aparecen los "extraordinarios" que inflan la cuenta un 30%.
+                    </p>
+                </div>
+                
+                <div class="green-flag pl-4 bg-stone-900/50 p-4 rounded-r">
+                    <h4 class="text-sanctum-green font-bold text-xs tracking-widest mb-2 uppercase">🛡️ El Blindaje Sanctum</h4>
+                    <p class="italic text-stone-400 mb-2">"Libro Abierto: Costo + Honorario"</p>
+                    <p class="text-sm text-stone-500">
+                        <strong class="text-stone-300">La Verdad:</strong> Ves las facturas reales del proveedor. Mi ganancia es fija y transparente. Si consigo descuento, el ahorro es tuyo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-stone-100 text-stone-900 py-16">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-10">
+                <i class="fas fa-balance-scale text-4xl text-sanctum-dark mb-4"></i>
+                <h2 class="font-serif text-3xl font-bold mb-2">La Cláusula de Sangrado</h2>
+                <p class="text-stone-600 max-w-lg mx-auto">
+                    La única forma de saber si un arquitecto confía en sus tiempos es pidiéndole que firme esto.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 border-2 border-stone-300 shadow-lg relative">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-sanctum-red text-white px-3 py-1 text-xs font-bold tracking-widest uppercase rounded">
+                    Herramienta de Negociación
+                </div>
+                
+                <p id="clauseText" class="font-serif text-lg leading-relaxed text-stone-800 italic mb-6">
+                    "Por cada día de retraso en la fecha de entrega pactada (DD/MM/AAAA), el CONTRATISTA bonificará al CLIENTE el <span class="bg-yellow-100 px-1 font-bold">1.0% del valor total</span> del contrato por día, descontándolo directamente del finiquito o saldo pendiente."
+                </p>
+
+                <div class="flex justify-between items-center border-t border-stone-200 pt-4 mt-4">
+                    <div class="text-xs text-stone-500">
+                        <i class="fas fa-info-circle mr-1"></i> Copia esto y pégalo en tu contrato.
+                    </div>
+                    <button onclick="copyClause()" class="copy-btn bg-sanctum-dark text-white hover:bg-sanctum-green px-6 py-2 rounded text-sm font-bold transition-colors flex items-center">
+                        <i class="far fa-copy mr-2"></i> COPIAR TEXTO
+                    </button>
+                </div>
+            </div>
+            
+            <p class="text-center text-sm mt-6 text-stone-500 italic">
+                *En Sanctum Home, esta cláusula es estándar en todos nuestros contratos.
+            </p>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-6 py-20 text-center max-w-2xl">
+        <h3 class="font-serif text-2xl text-sanctum-gold italic mb-6">
+            ¿Listo para construir sin miedo?
+        </h3>
+        <p class="text-stone-400 mb-10">
+            Soy José Luis Nieves. No vendo fantasías, vendo certezas. 
+            Agenda tu sesión de diagnóstico "Taller de Santuario".
+        </p>
+        
+        <a href="https://wa.me/5255XXXXXXXX?text=Hola,%20vi%20la%20Lista%20Negra%20y%20quiero%20agendar%20mi%20diagnóstico." 
+           class="inline-block border border-sanctum-gold text-sanctum-gold hover:bg-sanctum-gold hover:text-stone-900 py-4 px-10 font-bold tracking-widest uppercase transition-all duration-300 text-sm">
+            Contactar vía WhatsApp
+        </a>
+    </div>
+
+    <div class="border-t border-stone-800 bg-black py-8 text-center">
+        <p class="text-stone-600 text-xs">
+            &copy; 2025 Sanctum Home. Estrategia Forense aplicada al Diseño.
+        </p>
     </div>
 
     <script>
@@ -356,15 +212,21 @@
             const text = document.getElementById("clauseText").innerText;
             navigator.clipboard.writeText(text).then(() => {
                 const btn = document.querySelector('.copy-btn');
-                btn.innerHTML = '<i class="fas fa-check"></i> Copiado';
-                btn.style.background = '#2C2C2C';
+                const originalContent = btn.innerHTML;
+                
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i> COPIADO';
+                btn.classList.remove('bg-sanctum-dark');
+                btn.classList.add('bg-green-600');
+                
                 setTimeout(() => {
-                    btn.innerHTML = '<i class="fas fa-copy"></i> Copiar Texto';
-                    btn.style.background = '#5A6955';
+                    btn.innerHTML = originalContent;
+                    btn.classList.add('bg-sanctum-dark');
+                    btn.classList.remove('bg-green-600');
                 }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
             });
         }
     </script>
-
 </body>
 </html>
