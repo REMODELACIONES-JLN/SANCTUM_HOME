@@ -4,10 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>SANCTUM HOME | Antes de firmar, revísalo</title>
+<title>SANCTUM HOME | Blindaje estratégico para remodelaciones</title>
 
-<meta property="og:title" content="SANCTUM HOME | Protección de inversión en remodelación">
-<meta property="og:description" content="Detecto riesgos, errores y sobrecostos antes de construir.">
+<meta name="description" content="Detectamos riesgos, ambigüedades y puntos vulnerables antes de construir para proteger tu inversión y evitar sobrecostos innecesarios.">
+
+<meta property="og:title" content="SANCTUM HOME | Antes de firmar, revísalo">
+<meta property="og:description" content="Blindaje estratégico de inversión en remodelación.">
 <meta property="og:type" content="website">
 
 <script src="https://cdn.tailwindcss.com"></script>
@@ -15,63 +17,92 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
-body{
-    font-family:'Montserrat',sans-serif;
-    background:#F8F7F2;
-    color:#2d2d2d;
+:root{
+    --bg:#f5f2eb;
+    --text:#1f1f1f;
+    --muted:#666;
+    --green:#55624f;
+    --green-light:#71806b;
+    --dark:#171717;
+    --border:#e5e1d8;
 }
 
-.hero-bg{
-    background-image:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
-    url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+.font-editorial{
+    font-family:'Cormorant Garamond',serif;
+}
+
+.hero-overlay{
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.7)),
+    url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1974&auto=format&fit=crop');
 
     background-size:cover;
     background-position:center;
 }
 
-.whatsapp-float{
-    position:fixed;
-    width:65px;
-    height:65px;
-    bottom:30px;
-    right:30px;
-    background:#25D366;
-    color:#fff;
-    border-radius:50%;
-    text-align:center;
-    font-size:34px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:999;
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
-    transition:.3s;
-}
-
-.whatsapp-float:hover{
-    transform:scale(1.1);
+.glass{
+    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .fade-up{
-    animation:fadeUp 1s ease;
+    animation:fadeUp 1.2s ease;
 }
 
 @keyframes fadeUp{
     from{
         opacity:0;
-        transform:translateY(30px);
+        transform:translateY(40px);
     }
     to{
         opacity:1;
         transform:translateY(0);
     }
+}
+
+.section-spacing{
+    padding-top:120px;
+    padding-bottom:120px;
+}
+
+.soft-card{
+    background:#fbfaf7;
+    border:1px solid var(--border);
+}
+
+.whatsapp-float{
+    position:fixed;
+    width:70px;
+    height:70px;
+    bottom:28px;
+    right:28px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    z-index:999;
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.08);
 }
 
 </style>
@@ -82,31 +113,31 @@ body{
 
 <!-- HEADER -->
 
-<header class="fixed top-0 left-0 w-full z-50 bg-[#F8F7F2]/95 backdrop-blur-md border-b border-gray-200">
+<header class="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/20 backdrop-blur-md">
 
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
-        <a href="#" class="text-2xl font-serif tracking-widest text-[#5A6955] font-bold">
-            SANCTUM HOME
+        <a href="#" class="text-white tracking-[0.25em] text-sm md:text-base font-semibold uppercase">
+            Sanctum Home
         </a>
 
-        <nav class="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
+        <nav class="hidden md:flex items-center gap-10 text-sm text-white/80 tracking-wide">
 
-            <a href="#problema" class="hover:text-[#5A6955] transition">
-                PROBLEMA
+            <a href="#problema" class="hover:text-white transition">
+                Problema
             </a>
 
-            <a href="#proceso" class="hover:text-[#5A6955] transition">
-                PROCESO
+            <a href="#metodo" class="hover:text-white transition">
+                Método
             </a>
 
-            <a href="#servicios" class="hover:text-[#5A6955] transition">
-                SERVICIOS
+            <a href="#servicios" class="hover:text-white transition">
+                Servicios
             </a>
 
             <a href="#contacto"
-               class="bg-[#5A6955] text-white px-6 py-3 rounded-sm hover:opacity-90 transition tracking-widest text-xs">
-                REVISAR CONTRATO
+               class="border border-white/20 px-5 py-3 uppercase tracking-[0.2em] text-xs hover:bg-white hover:text-black transition">
+                Revisar proyecto
             </a>
 
         </nav>
@@ -117,35 +148,45 @@ body{
 
 <!-- HERO -->
 
-<section class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-6">
+<section class="hero-overlay min-h-screen flex items-center text-white px-6">
 
-    <div class="max-w-5xl fade-up">
+    <div class="max-w-7xl mx-auto w-full pt-28">
 
-        <p class="uppercase tracking-[0.4em] text-sm mb-6 opacity-80">
-            Protección de inversión en remodelación
-        </p>
+        <div class="max-w-5xl fade-up">
 
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif leading-tight mb-8">
+            <p class="uppercase tracking-[0.45em] text-xs md:text-sm opacity-70 mb-8">
+                Blindaje estratégico de inversión en remodelación
+            </p>
 
-            Antes de firmar,<br>
-            revísalo.
+            <h1 class="font-editorial text-6xl md:text-8xl lg:text-[110px] leading-[0.95] mb-10 max-w-6xl">
+                Antes de invertir
+                cientos de miles
+                en una remodelación,
+                asegúrate de entender
+                exactamente qué estás firmando.
+            </h1>
 
-        </h1>
+            <p class="max-w-3xl text-lg md:text-2xl leading-relaxed text-white/80 mb-14 font-light">
+                Detectamos riesgos, ambigüedades y puntos vulnerables antes de construir para proteger tu inversión y evitar sobrecostos innecesarios.
+            </p>
 
-        <p class="max-w-3xl mx-auto text-lg md:text-2xl leading-relaxed opacity-90 mb-12">
+            <div class="flex flex-col sm:flex-row gap-5">
 
-            Detecto riesgos, errores y sobrecostos
-            antes de que empiece la obra.
+                <a href="https://wa.me/525573794436?text=Hola,%20quiero%20revisar%20mi%20proyecto"
+                   target="_blank"
+                   class="bg-white text-black px-10 py-5 uppercase tracking-[0.25em] text-xs font-semibold hover:bg-[#ece8df] transition text-center">
 
-        </p>
+                    Revisar mi proyecto
 
-        <a href="https://wa.me/525573794436?text=Hola,%20quiero%20revisar%20mi%20contrato"
-           target="_blank"
-           class="bg-white text-[#5A6955] px-10 py-5 uppercase tracking-[0.2em] font-bold text-sm hover:bg-gray-100 transition shadow-xl">
+                </a>
 
-            Revisar mi contrato
+                <div class="glass px-8 py-5 text-sm tracking-wide uppercase text-white/70 flex items-center justify-center">
+                    La claridad también es lujo
+                </div>
 
-        </a>
+            </div>
+
+        </div>
 
     </div>
 
@@ -153,85 +194,89 @@ body{
 
 <!-- PROBLEMA -->
 
-<section id="problema" class="py-28 bg-white">
+<section id="problema" class="section-spacing bg-[#f7f4ee]">
 
-    <div class="container mx-auto px-6 max-w-6xl">
+    <div class="max-w-7xl mx-auto px-6">
 
-        <div class="grid md:grid-cols-2 gap-20 items-center">
+        <div class="grid lg:grid-cols-2 gap-24 items-center">
 
             <div>
 
-                <p class="uppercase tracking-[0.3em] text-sm text-[#5A6955] mb-4">
+                <p class="uppercase tracking-[0.35em] text-xs text-[#6c7867] mb-5">
                     El problema real
                 </p>
 
-                <h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">
-
-                    La mayoría de los sobrecostos<br>
-                    ya están en el contrato.
-
+                <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10 text-[#222]">
+                    La mayoría de los problemas de una remodelación
+                    ya estaban escritos antes de empezar la obra.
                 </h2>
 
-                <p class="text-lg text-gray-600 leading-relaxed mb-6">
-
-                    El problema normalmente no es el precio.
-
+                <p class="text-xl text-[#555] leading-relaxed mb-8">
+                    El problema normalmente no es el precio inicial.
                 </p>
 
-                <p class="text-lg text-gray-600 leading-relaxed mb-6">
-
-                    Es lo que no está definido:
+                <p class="text-xl text-[#555] leading-relaxed mb-10">
+                    El problema es lo que no está definido:
                     materiales ambiguos,
                     alcances abiertos,
                     partidas incompletas,
                     cambios sin control.
-
                 </p>
 
-                <p class="text-xl font-semibold text-[#5A6955] leading-relaxed">
-
-                    Ahí es donde normalmente se pierde dinero.
-
+                <p class="text-2xl text-[#55624f] font-medium leading-relaxed max-w-2xl">
+                    Ahí es donde normalmente empieza la pérdida de control.
                 </p>
 
             </div>
 
             <div class="space-y-6">
 
-                <div class="bg-[#F8F7F2] p-8 border-l-4 border-[#5A6955] shadow-sm">
+                <div class="soft-card p-10 rounded-none shadow-sm">
 
-                    <h3 class="text-xl font-bold mb-3">
-                        Riesgos ocultos
+                    <div class="text-xs uppercase tracking-[0.3em] text-[#7a8575] mb-5">
+                        Riesgo #01
+                    </div>
+
+                    <h3 class="text-3xl font-editorial mb-5">
+                        “Mármol o similar”
                     </h3>
 
-                    <p class="text-gray-600">
-                        Detecto errores que normalmente terminan
-                        en sobrecostos y conflictos.
+                    <p class="text-[#666] text-lg leading-relaxed">
+                        Puede significar mármol premium…
+                        o un material completamente distinto.
                     </p>
 
                 </div>
 
-                <div class="bg-[#F8F7F2] p-8 border-l-4 border-[#5A6955] shadow-sm">
+                <div class="soft-card p-10 rounded-none shadow-sm">
 
-                    <h3 class="text-xl font-bold mb-3">
-                        Impacto económico
+                    <div class="text-xs uppercase tracking-[0.3em] text-[#7a8575] mb-5">
+                        Riesgo #02
+                    </div>
+
+                    <h3 class="text-3xl font-editorial mb-5">
+                        “Según se requiera”
                     </h3>
 
-                    <p class="text-gray-600">
-                        Traduzco riesgos técnicos a dinero real.
+                    <p class="text-[#666] text-lg leading-relaxed">
+                        Normalmente significa costos extra después.
                     </p>
 
                 </div>
 
-                <div class="bg-[#F8F7F2] p-8 border-l-4 border-[#5A6955] shadow-sm">
+                <div class="soft-card p-10 rounded-none shadow-sm">
 
-                    <h3 class="text-xl font-bold mb-3">
-                        Claridad antes de firmar
+                    <div class="text-xs uppercase tracking-[0.3em] text-[#7a8575] mb-5">
+                        Riesgo #03
+                    </div>
+
+                    <h3 class="text-3xl font-editorial mb-5">
+                        “Instalaciones generales”
                     </h3>
 
-                    <p class="text-gray-600">
-                        Para que tomes decisiones con control,
-                        no con incertidumbre.
+                    <p class="text-[#666] text-lg leading-relaxed">
+                        No sabes realmente qué incluye.
+                        Y eso elimina claridad sobre el costo real.
                     </p>
 
                 </div>
@@ -244,94 +289,197 @@ body{
 
 </section>
 
-<!-- PROCESO -->
+<!-- QUÉ HACEMOS -->
 
-<section id="proceso" class="py-28 bg-[#5A6955] text-white">
+<section class="section-spacing bg-[#1d1d1b] text-white">
 
-    <div class="container mx-auto px-6 max-w-6xl">
+    <div class="max-w-7xl mx-auto px-6">
 
-        <div class="text-center mb-20">
+        <div class="max-w-4xl mb-24">
 
-            <p class="uppercase tracking-[0.3em] text-sm opacity-70 mb-4">
-                Metodología
+            <p class="uppercase tracking-[0.35em] text-xs text-white/40 mb-5">
+                Qué hacemos
             </p>
 
-            <h2 class="text-4xl md:text-5xl font-serif">
+            <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10">
+                No revisamos estética.
+                Revisamos dónde puedes perder dinero.
+            </h2>
 
-                Cómo funciona
+            <p class="text-xl text-white/70 leading-relaxed max-w-3xl">
+                Traducimos riesgos técnicos y contractuales a impacto económico real antes de que empiece la obra.
+            </p>
 
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="border border-white/10 p-10">
+                <div class="text-4xl mb-6 text-[#a5b39d]">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+                <h3 class="text-2xl font-editorial mb-4">
+                    Riesgos ocultos
+                </h3>
+                <p class="text-white/60 leading-relaxed">
+                    Detectamos vulnerabilidades que normalmente terminan en sobrecostos o conflictos.
+                </p>
+            </div>
+
+            <div class="border border-white/10 p-10">
+                <div class="text-4xl mb-6 text-[#a5b39d]">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <h3 class="text-2xl font-editorial mb-4">
+                    Claridad contractual
+                </h3>
+                <p class="text-white/60 leading-relaxed">
+                    Identificamos ambigüedades antes de que se conviertan en decisiones caras.
+                </p>
+            </div>
+
+            <div class="border border-white/10 p-10">
+                <div class="text-4xl mb-6 text-[#a5b39d]">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="text-2xl font-editorial mb-4">
+                    Impacto económico
+                </h3>
+                <p class="text-white/60 leading-relaxed">
+                    Traducimos observaciones técnicas a dinero real y exposición financiera.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SEMÁFORO -->
+
+<section class="section-spacing bg-white">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-4xl mx-auto mb-24">
+
+            <p class="uppercase tracking-[0.35em] text-xs text-[#6c7867] mb-5">
+                Semáforo Sanctum
+            </p>
+
+            <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10">
+                Hacemos visible el nivel de riesgo
+                antes de construir.
+            </h2>
+
+            <p class="text-xl text-[#666] leading-relaxed">
+                Tu proyecto se clasifica según ambigüedad, control documental y exposición económica.
+            </p>
+
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <div class="border border-[#dfe5da] p-12 bg-[#f8fbf6]">
+
+                <div class="w-6 h-6 rounded-full bg-[#5f8f54] mb-8"></div>
+
+                <h3 class="font-editorial text-4xl mb-6">
+                    Bajo riesgo
+                </h3>
+
+                <p class="text-[#666] text-lg leading-relaxed">
+                    Documentación clara.
+                    Alcances relativamente definidos.
+                </p>
+
+            </div>
+
+            <div class="border border-[#efe5c8] p-12 bg-[#fffcf4]">
+
+                <div class="w-6 h-6 rounded-full bg-[#c9a544] mb-8"></div>
+
+                <h3 class="font-editorial text-4xl mb-6">
+                    Riesgo medio
+                </h3>
+
+                <p class="text-[#666] text-lg leading-relaxed">
+                    Existen ambigüedades y posibles desviaciones económicas.
+                </p>
+
+            </div>
+
+            <div class="border border-[#f0d7d7] p-12 bg-[#fff8f8]">
+
+                <div class="w-6 h-6 rounded-full bg-[#b05656] mb-8"></div>
+
+                <h3 class="font-editorial text-4xl mb-6">
+                    Riesgo alto
+                </h3>
+
+                <p class="text-[#666] text-lg leading-relaxed">
+                    Alto potencial de sobrecostos, pérdida de control y conflictos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- MÉTODO -->
+
+<section id="metodo" class="section-spacing bg-[#f7f4ee]">
+
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center max-w-4xl mx-auto mb-24">
+
+            <p class="uppercase tracking-[0.35em] text-xs text-[#6c7867] mb-5">
+                Método
+            </p>
+
+            <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10">
+                Cómo funciona el blindaje.
             </h2>
 
         </div>
 
-        <div class="grid md:grid-cols-4 gap-8">
+        <div class="grid md:grid-cols-4 gap-10">
 
-            <div class="text-center">
-
-                <div class="text-5xl font-serif mb-6 opacity-60">
-                    1
-                </div>
-
-                <h3 class="text-xl font-semibold mb-4">
-                    Envío
-                </h3>
-
-                <p class="opacity-80 leading-relaxed">
-                    Me envías contrato,
-                    presupuesto o propuesta.
+            <div>
+                <div class="text-6xl font-editorial text-[#7d8977] mb-6">01</div>
+                <h3 class="text-2xl font-editorial mb-5">Envío</h3>
+                <p class="text-[#666] leading-relaxed text-lg">
+                    Envías contrato, presupuesto o propuesta.
                 </p>
-
             </div>
 
-            <div class="text-center">
-
-                <div class="text-5xl font-serif mb-6 opacity-60">
-                    2
-                </div>
-
-                <h3 class="text-xl font-semibold mb-4">
-                    Diagnóstico
-                </h3>
-
-                <p class="opacity-80 leading-relaxed">
-                    Detecto riesgos,
-                    ambigüedades y puntos críticos.
+            <div>
+                <div class="text-6xl font-editorial text-[#7d8977] mb-6">02</div>
+                <h3 class="text-2xl font-editorial mb-5">Diagnóstico</h3>
+                <p class="text-[#666] leading-relaxed text-lg">
+                    Detectamos ambigüedades y puntos vulnerables.
                 </p>
-
             </div>
 
-            <div class="text-center">
-
-                <div class="text-5xl font-serif mb-6 opacity-60">
-                    3
-                </div>
-
-                <h3 class="text-xl font-semibold mb-4">
-                    Auditoría
-                </h3>
-
-                <p class="opacity-80 leading-relaxed">
-                    Te explico el impacto económico
-                    y operativo.
+            <div>
+                <div class="text-6xl font-editorial text-[#7d8977] mb-6">03</div>
+                <h3 class="text-2xl font-editorial mb-5">Análisis</h3>
+                <p class="text-[#666] leading-relaxed text-lg">
+                    Traducimos riesgos a impacto económico real.
                 </p>
-
             </div>
 
-            <div class="text-center">
-
-                <div class="text-5xl font-serif mb-6 opacity-60">
-                    4
-                </div>
-
-                <h3 class="text-xl font-semibold mb-4">
-                    Protección
-                </h3>
-
-                <p class="opacity-80 leading-relaxed">
-                    Tomas decisiones
-                    con claridad antes de avanzar.
+            <div>
+                <div class="text-6xl font-editorial text-[#7d8977] mb-6">04</div>
+                <h3 class="text-2xl font-editorial mb-5">Claridad</h3>
+                <p class="text-[#666] leading-relaxed text-lg">
+                    Tomas decisiones con control antes de avanzar.
                 </p>
-
             </div>
 
         </div>
@@ -342,87 +490,81 @@ body{
 
 <!-- SERVICIOS -->
 
-<section id="servicios" class="py-28 bg-white">
+<section id="servicios" class="section-spacing bg-white">
 
-    <div class="container mx-auto px-6 max-w-6xl">
+    <div class="max-w-7xl mx-auto px-6">
 
-        <div class="text-center mb-20">
+        <div class="text-center max-w-4xl mx-auto mb-24">
 
-            <p class="uppercase tracking-[0.3em] text-sm text-[#5A6955] mb-4">
+            <p class="uppercase tracking-[0.35em] text-xs text-[#6c7867] mb-5">
                 Servicios
             </p>
 
-            <h2 class="text-4xl md:text-5xl font-serif">
-                Protección según el nivel de riesgo
+            <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10">
+                Protección según el nivel de exposición.
             </h2>
 
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid lg:grid-cols-3 gap-8">
 
-            <!-- CARD 1 -->
+            <div class="soft-card p-12">
 
-            <div class="bg-[#F8F7F2] p-10 border border-gray-100 hover:shadow-xl transition">
+                <div class="uppercase tracking-[0.3em] text-xs text-[#6c7867] mb-5">
+                    Entrada estratégica
+                </div>
 
-                <h3 class="text-3xl font-serif mb-6">
+                <h3 class="font-editorial text-4xl mb-8">
                     Diagnóstico
+                    Estratégico
                 </h3>
 
-                <p class="uppercase tracking-[0.2em] text-xs text-[#5A6955] font-bold mb-8">
-                    Revisión inicial
-                </p>
-
-                <ul class="space-y-4 text-gray-600">
-
+                <ul class="space-y-5 text-lg text-[#666] leading-relaxed">
                     <li>• Riesgos principales</li>
-                    <li>• Observaciones clave</li>
+                    <li>• Ambigüedades críticas</li>
                     <li>• Impacto económico estimado</li>
-
+                    <li>• Llamada privada</li>
                 </ul>
 
             </div>
 
-            <!-- CARD 2 -->
+            <div class="bg-[#1d1d1b] text-white p-12 scale-[1.02] shadow-2xl">
 
-            <div class="bg-[#2d2d2d] text-white p-10 shadow-2xl scale-105">
-
-                <h3 class="text-3xl font-serif mb-6">
-                    Auditoría Premium
-                </h3>
-
-                <p class="uppercase tracking-[0.2em] text-xs text-[#AAB8A1] font-bold mb-8">
+                <div class="uppercase tracking-[0.3em] text-xs text-[#9daa95] mb-5">
                     Protección avanzada
-                </p>
+                </div>
 
-                <ul class="space-y-4 opacity-90">
+                <h3 class="font-editorial text-4xl mb-8">
+                    Blindaje
+                    Premium
+                </h3>
 
-                    <li>• Auditoría completa</li>
+                <ul class="space-y-5 text-lg text-white/70 leading-relaxed">
+                    <li>• Auditoría profunda</li>
+                    <li>• Semáforo Sanctum</li>
                     <li>• Hallazgos detallados</li>
-                    <li>• Reunión privada</li>
-                    <li>• Recomendaciones</li>
-
+                    <li>• Recomendaciones específicas</li>
+                    <li>• Documento ejecutivo premium</li>
                 </ul>
 
             </div>
 
-            <!-- CARD 3 -->
+            <div class="soft-card p-12">
 
-            <div class="bg-[#F8F7F2] p-10 border border-gray-100 hover:shadow-xl transition">
+                <div class="uppercase tracking-[0.3em] text-xs text-[#6c7867] mb-5">
+                    Acompañamiento
+                </div>
 
-                <h3 class="text-3xl font-serif mb-6">
+                <h3 class="font-editorial text-4xl mb-8">
                     Blindaje
+                    de Obra
                 </h3>
 
-                <p class="uppercase tracking-[0.2em] text-xs text-[#5A6955] font-bold mb-8">
-                    Acompañamiento
-                </p>
-
-                <ul class="space-y-4 text-gray-600">
-
-                    <li>• Revisión de cambios</li>
-                    <li>• Validación de extras</li>
-                    <li>• Seguimiento estratégico</li>
-
+                <ul class="space-y-5 text-lg text-[#666] leading-relaxed">
+                    <li>• Validación de cambios</li>
+                    <li>• Revisión de extras</li>
+                    <li>• Supervisión estratégica</li>
+                    <li>• Segunda opinión continua</li>
                 </ul>
 
             </div>
@@ -433,31 +575,69 @@ body{
 
 </section>
 
-<!-- CTA -->
+<!-- AUTORIDAD -->
 
-<section class="py-28 bg-[#F8F7F2]">
+<section class="section-spacing bg-[#1d1d1b] text-white">
 
-    <div class="container mx-auto px-6 text-center max-w-4xl">
+    <div class="max-w-6xl mx-auto px-6">
 
-        <h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">
+        <div class="grid lg:grid-cols-2 gap-20 items-center">
 
-            No necesitas más información.<br>
-            Necesitas claridad.
+            <div>
 
+                <p class="uppercase tracking-[0.35em] text-xs text-white/40 mb-5">
+                    Experiencia
+                </p>
+
+                <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10">
+                    Más de 12 años detectando vulnerabilidades técnicas y financieras.
+                </h2>
+
+            </div>
+
+            <div class="space-y-8 text-white/65 text-lg leading-relaxed">
+
+                <p>
+                    Experiencia en auditoría, control documental y mitigación de riesgo en proyectos de obra pública y supervisión técnica.
+                </p>
+
+                <p>
+                    Especialización en revisión de presupuestos, trazabilidad documental y protección contra desviaciones económicas.
+                </p>
+
+                <p>
+                    La mayoría de los problemas aparecen demasiado tarde.
+                    El objetivo de Sanctum Home es detectarlos antes.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA FINAL -->
+
+<section class="section-spacing bg-[#f5f2eb]">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <h2 class="font-editorial text-5xl md:text-7xl leading-[1] mb-10 text-[#1f1f1f]">
+            No necesitas más información.
+            Necesitas claridad antes de avanzar.
         </h2>
 
-        <p class="text-lg text-gray-600 leading-relaxed mb-12">
-
-            La mayoría detecta estos problemas
-            cuando la obra ya empezó.
-
+        <p class="text-xl text-[#666] leading-relaxed max-w-3xl mx-auto mb-14">
+            La mayoría detecta estos problemas cuando la obra ya empezó.
         </p>
 
-        <a href="https://wa.me/525573794436?text=Hola,%20quiero%20revisar%20mi%20contrato"
+        <a href="https://wa.me/525573794436?text=Hola,%20quiero%20revisar%20mi%20proyecto"
            target="_blank"
-           class="bg-[#5A6955] text-white px-10 py-5 uppercase tracking-[0.2em] text-sm font-bold hover:opacity-90 transition shadow-xl">
+           class="inline-block bg-[#55624f] text-white px-12 py-6 uppercase tracking-[0.25em] text-xs font-semibold hover:opacity-90 transition">
 
-            Enviar contrato
+            Solicitar revisión
 
         </a>
 
@@ -467,29 +647,24 @@ body{
 
 <!-- CONTACTO -->
 
-<section id="contacto" class="py-28 bg-white">
+<section id="contacto" class="section-spacing bg-white">
 
-    <div class="container mx-auto px-6 max-w-3xl">
+    <div class="max-w-4xl mx-auto px-6">
 
-        <div class="bg-[#F8F7F2] p-10 md:p-14 shadow-xl">
+        <div class="border border-[#e5e1d8] p-10 md:p-16 bg-[#fbfaf7] shadow-sm">
 
-            <div class="text-center mb-12">
+            <div class="text-center mb-14">
 
-                <p class="uppercase tracking-[0.3em] text-sm text-[#5A6955] mb-4">
+                <p class="uppercase tracking-[0.35em] text-xs text-[#6c7867] mb-5">
                     Contacto
                 </p>
 
-                <h2 class="text-4xl font-serif mb-6">
-
-                    Revisemos tu proyecto
-
+                <h2 class="font-editorial text-5xl md:text-6xl leading-[1] mb-8">
+                    Revisemos tu proyecto.
                 </h2>
 
-                <p class="text-gray-600">
-
-                    Cuéntame qué quieres revisar
-                    y te digo dónde puede haber riesgo.
-
+                <p class="text-[#666] text-lg leading-relaxed max-w-2xl mx-auto">
+                    Cuéntame qué quieres revisar y te diré dónde puede existir riesgo.
                 </p>
 
             </div>
@@ -498,30 +673,30 @@ body{
 
                 <input type="text"
                        placeholder="Nombre"
-                       class="w-full p-4 border border-gray-200 bg-white focus:outline-none focus:border-[#5A6955]">
+                       class="w-full p-5 border border-[#ddd7ca] bg-white focus:outline-none focus:border-[#55624f] text-lg">
 
                 <input type="tel"
                        placeholder="WhatsApp"
-                       class="w-full p-4 border border-gray-200 bg-white focus:outline-none focus:border-[#5A6955]">
+                       class="w-full p-5 border border-[#ddd7ca] bg-white focus:outline-none focus:border-[#55624f] text-lg">
 
-                <select class="w-full p-4 border border-gray-200 bg-white focus:outline-none focus:border-[#5A6955]">
+                <select class="w-full p-5 border border-[#ddd7ca] bg-white focus:outline-none focus:border-[#55624f] text-lg text-[#666]">
 
                     <option>¿Qué quieres revisar?</option>
                     <option>Contrato</option>
                     <option>Presupuesto</option>
-                    <option>Alcances</option>
                     <option>Propuesta completa</option>
+                    <option>Proyecto en ejecución</option>
 
                 </select>
 
-                <textarea rows="5"
+                <textarea rows="6"
                           placeholder="Cuéntame brevemente tu caso"
-                          class="w-full p-4 border border-gray-200 bg-white focus:outline-none focus:border-[#5A6955]"></textarea>
+                          class="w-full p-5 border border-[#ddd7ca] bg-white focus:outline-none focus:border-[#55624f] text-lg"></textarea>
 
                 <button type="submit"
-                        class="w-full bg-[#5A6955] text-white py-5 uppercase tracking-[0.2em] text-sm font-bold hover:opacity-90 transition">
+                        class="w-full bg-[#55624f] text-white py-6 uppercase tracking-[0.25em] text-xs font-semibold hover:opacity-90 transition">
 
-                    Solicitar revisión
+                    Solicitar revisión estratégica
 
                 </button>
 
@@ -535,56 +710,55 @@ body{
 
 <!-- FOOTER -->
 
-<footer class="bg-[#2d2d2d] text-white py-14">
+<footer class="bg-[#171717] text-white py-16">
 
-    <div class="container mx-auto px-6 text-center">
+    <div class="max-w-7xl mx-auto px-6 text-center">
 
-        <h3 class="text-3xl font-serif tracking-widest mb-6">
-            SANCTUM HOME
+        <h3 class="uppercase tracking-[0.35em] text-sm mb-8">
+            Sanctum Home
         </h3>
 
-        <p class="opacity-70 mb-8 max-w-xl mx-auto">
-
-            Protección de inversión en remodelación.
-
+        <p class="text-white/50 max-w-2xl mx-auto leading-relaxed mb-12 text-lg">
+            Firma boutique de blindaje estratégico para remodelaciones premium.
         </p>
 
-       <div class="flex justify-center gap-8 mb-10 text-2xl">
+        <div class="flex justify-center gap-8 text-2xl mb-12 text-white/70">
 
-    <!-- Instagram -->
-    <a href="https://instagram.com/sanctumhome.mx"
-       target="_blank"
-       class="hover:text-[#AAB8A1] transition">
+            <a href="https://instagram.com/sanctumhome.mx" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-instagram"></i>
+            </a>
 
-        <i class="fab fa-instagram"></i>
+            <a href="https://facebook.com/sanctumhome.mx" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-facebook-f"></i>
+            </a>
 
-    </a>
+            <a href="https://tiktok.com/@sanctumhome.mx" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-tiktok"></i>
+            </a>
 
-    <!-- Facebook -->
-    <a href="https://facebook.com/sanctumhome.mx"
-       target="_blank"
-       class="hover:text-[#AAB8A1] transition">
+            <a href="https://wa.me/525573794436" target="_blank" class="hover:text-white transition">
+                <i class="fab fa-whatsapp"></i>
+            </a>
 
-        <i class="fab fa-facebook-f"></i>
+        </div>
 
-    </a>
+        <p class="text-white/30 text-sm tracking-wide">
+            Antes de firmar, revísalo.
+        </p>
 
-    <!-- TikTok -->
-    <a href="https://tiktok.com/@sanctumhome.mx"
-       target="_blank"
-       class="hover:text-[#AAB8A1] transition">
+    </div>
 
-        <i class="fab fa-tiktok"></i>
+</footer>
 
-    </a>
+<!-- WHATSAPP FLOAT -->
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/525573794436"
-       target="_blank"
-       class="hover:text-[#AAB8A1] transition">
+<a href="https://wa.me/525573794436?text=Hola,%20quiero%20revisar%20mi%20proyecto"
+   class="whatsapp-float"
+   target="_blank">
 
-        <i class="fab fa-whatsapp"></i>
+   <i class="fab fa-whatsapp"></i>
 
-    </a>
+</a>
 
-</div>
+</body>
+</html>
